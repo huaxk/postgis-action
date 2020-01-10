@@ -6,7 +6,7 @@ import unittest, os, db_postgres, sequtils, strformat
 # echo password
 
 let password = getEnv("password")
-echo password
+echo "the ps is:" & password
 echo password.len
 
 suite "Test Postgis":
