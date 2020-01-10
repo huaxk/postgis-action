@@ -14,7 +14,7 @@ jobs:
       uses: huaxk/postgis-action@master
       with:
         postgresql user: 'test'
-        postgresql password: 'test'
+        postgresql password: ${{ secrets.DatabasePassword }}
         postgresql db: 'test'
 
     - uses: jiro4989/setup-nim-action@v1.0.1
