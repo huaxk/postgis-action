@@ -1,5 +1,5 @@
 # PostgreSQL with Postgis GitHub Action
-This [GitHub Action](https://github.com/features/actions) setup a PostgreSQL database with Postgis.
+This [GitHub Action](https://github.com/features/actions) setup a PostgreSQL database with Postgis.  
 Inspired by https://github.com/Harmon758/postgresql-action, @Harmon758 Thanks!
 
 # Usage
