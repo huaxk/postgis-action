@@ -1,0 +1,25 @@
+name: test
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+      
+    - name: Set up Postgresql with Postgis
+      uses: huaxk/postgis-action@master
+      with:
+        postgresql user: 'test'
+        postgresql password: ${{ secrets.DatabasePassword }}
+        postgresql db: 'test'
+
+    - uses: jiro4989/setup-nim-action@v1.0.1
+      
+    - name: Run test
+      run: nim c -r tests/connection.nim
+      env:
+        password: ${{ secrets.DatabasePassword }}
