@@ -1,13 +1,9 @@
 import unittest, os, db_postgres, sequtils, strformat
 
-# let params = commandLineParams()
-# let password = if params.len == 0: "test" else: "test"
-# echo params
-# echo password
-
 let password = getEnv("password")
-echo "the ps is:" & password
-echo password.len
+if password.len == 0:
+  echo "Please set env of database password "
+  quit(1)
 
 suite "Test Postgis":
   echo "connect to pg"
