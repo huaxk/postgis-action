@@ -1,4 +1,7 @@
 import os, db_postgres
 
-# let db = open("localhost", "test", "test", "test")
-echo getEnv("password")
+let password = getEnv("password")
+
+let db = open("localhost", "test", password, "test")
+let tables = db.getAllRows(sql"select tablename from pg_tables")
+echo tables
