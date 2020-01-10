@@ -21,9 +21,5 @@ jobs:
       
     - name: Run test
       run: nim c -r tests/connection.nim
-
-    - run: |
-        echo ${{ secrets.DatabasePassword }}
-        echo $password
       env:
         password: ${{ secrets.DatabasePassword }}
