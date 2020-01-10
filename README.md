@@ -1,5 +1,6 @@
 # PostgreSQL with Postgis GitHub Action
 This [GitHub Action](https://github.com/features/actions) setup a PostgreSQL database with Postgis.
+Inspired by https://github.com/Harmon758/postgresql-action, @Harmon758 Thanks!
 
 # Usage
 
@@ -14,7 +15,7 @@ steps:
     postgresql db: 'test'  # This optional environment variable can be used to define a different name for the default database that is created when the image is first started. If it is not specified, then the value of postgresql user will be used.
 ```
 
-Clinet params:
+Client params:
 * host: "localhost"
 * user: "test"
 * password: ***
